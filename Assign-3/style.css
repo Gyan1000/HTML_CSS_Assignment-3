@@ -1,0 +1,231 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+/* Header */
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 6rem;
+}
+.logo {
+  position: relative;
+  width: 10rem;
+  height: 3rem;
+  left: -4rem;
+}
+.logo img {
+  width: 6rem;
+  height: 2rem;
+  position: absolute;
+  top: 0.2rem;
+  left: 1rem;
+  display: block;
+}
+.logo {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 50%;
+}
+.logo::after {
+  content: " ";
+  width: 1px;
+  height: 3.5rem;
+  background-color: white;
+  display: inline-block;
+  margin-left: 2.5rem;
+  position: absolute;
+  left: 8rem;
+  top: -0.4rem;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.logo ul {
+  display: flex;
+  align-items: start;
+  width: 80%;
+  position: absolute;
+  left: 15rem;
+  top: 0.5rem;
+  gap: 4rem;
+  list-style: none;
+}
+.logo ul li {
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: "poppins";
+}
+nav .btn {
+  padding: 0.5rem 2rem;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  font-family: "poppins";
+  border-radius: 0.5rem;
+  background: #ba0cc5;
+  transition: 0.5s ease-in-out;
+}
+nav .btn:hover {
+  color: #ba0cc5;
+  background-color: white;
+}
+/* hero section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem;
+  width: 100%;
+  background-image: url("./assets/bg.png");
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 0.5rem;
+  text-align: center;
+}
+.hero-section1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.hero-section h1 {
+  margin-top: 12rem;
+  font-weight: 600;
+  font-size: 5rem;
+  text-align: center;
+  width: 70%;
+  line-height: 6rem;
+  color: white;
+  font-family: "poppins";
+}
+.hero-section p {
+  color: white;
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+.h-s1-btn {
+  background-color: #ba0cc5;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.7rem;
+  font-size: 2rem;
+  border-radius: 0.7rem;
+  font-weight: 600;
+  transition: 0.5s ease-in-out;
+  margin-top: 1rem;
+}
+.h-s1-btn:hover {
+  color: #ba0cc5;
+  background-color: white;
+}
+/* Responsive */
+@media screen and (max-width: 1150px) {
+  .logo ul {
+    gap: 1.7rem;
+  }
+  .h-s1-btn {
+    background-color: #ba0cc5;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.7rem;
+    border-radius: 0.7rem;
+    font-weight: 600;
+    transition: 0.5s ease-in-out;
+  }
+}
+@media screen and (max-width:950px) {
+  header {
+    background-color: black;
+    padding: 0.5rem 0.5rem;
+  }
+
+  nav {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 3rem;
+  }
+  .logo ul {
+    display: flex;
+    align-items: start;
+
+    width: 80%;
+    position: absolute;
+    left: 12rem;
+    top: 0.5rem;
+    gap: 1rem;
+    list-style: none;
+  }
+}
+
+@media screen and (max-width:750px) {
+  .logo ul {
+    align-self: start;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 0.7rem;
+    position: absolute;
+    top: 4.5rem;
+    left: 4rem;
+  }
+  .logo::after {
+    height: 4.5rem;
+
+    margin-left: 0rem;
+
+    left: 7.5rem;
+    top: -0.4rem;
+  }
+  .hero-section h1 {
+    margin-top: 12rem;
+    font-weight: 600;
+    font-size: 3rem;
+    text-align: center;
+    width: 70%;
+    line-height: 3rem;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .logo ul {
+    position: absolute;
+    top: 5rem;
+    left: 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2rem;
+
+    line-height: 2rem;
+  }
+
+  nav .btn {
+    padding: 1rem 1rem;
+
+    font-size: 0.7rem;
+  }
+}
